@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Nueva extends StatefulWidget {
+class Nueva extends StatelessWidget {
+  const Nueva({Key? key}) : super(key: key);
 
   @override
-  _NuevaState createState() => _NuevaState();
-}
-
-class _NuevaState extends State<Nueva> {
-
-  @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return MaterialApp(
-      home: ConsultarNegocios(),
-    );
+        home:Scaffold(
+          appBar: AppBar(
+            title: Text('App tiendas'),
+          ),
+          body: ConsultarNegocios()
+          ),
+        );
   }
 }
 
