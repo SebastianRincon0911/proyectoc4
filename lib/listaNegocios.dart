@@ -15,7 +15,7 @@ class Nueva extends StatelessWidget {
           ),
         );
   }
-  //aaaaaaaaaa
+
 }
 
 
@@ -43,27 +43,17 @@ class _ConsultarNegociosState extends State<ConsultarNegocios> {
           }
 
           return ListView(
-            children: snapshot.data!.docs.map(
-                    (DocumentSnapshot document){
+            children: snapshot.data!.docs.map((DocumentSnapshot document){
                   Map<String, dynamic> data = document.data()! as Map<String,dynamic>;
                   return Container(
-                      color: Colors.black12,
-                      margin: EdgeInsets.only(top: 5),
-                      child: ListTile(
-                        title: Text(data['Nombre'],
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
-                        ),
-                        subtitle: Text(data['Direccion']+"\n"+data['Nit'],
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
-                        ),
 
-                      )
+                      color: Colors.cyan  ,
+                      margin: EdgeInsets.only(top: 5),
+
+                      child: ListTile(
+                        title: Text(data['Nombre']),
+                          subtitle: Text(data['Direccion']+"\n"+data['Nit']),
+                          ),
                   );
                 }
             ).toList(),
