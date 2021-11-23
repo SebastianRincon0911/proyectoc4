@@ -12,38 +12,38 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->D:\proyectoc4\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->D:\proyectoc4\android\app\src\debug\AndroidManifest.xml:6:22-64
+14-->D:\Proyectos Mintic\proyectoc4\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->D:\Proyectos Mintic\proyectoc4\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 16    <!-- <uses-sdk android:minSdkVersion="14" /> -->
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:5-79
-17-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:22-76
+17-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:5-79
+17-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:22-76
 18
 19    <application
-19-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:3:4-40:19
+19-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:3:4-40:19
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.1.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\3c8fd1bfddb99a7a7e21faa1397acdb4\core-1.1.0\AndroidManifest.xml:24:18-86
+20-->[androidx.core:core:1.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\3c8fd1bfddb99a7a7e21faa1397acdb4\core-1.1.0\AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
 22        android:extractNativeLibs="false"
 23        android:icon="@mipmap/ic_launcher"
-23-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:5:9-43
+23-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:5:9-43
 24        android:label="proyectoc4" >
-24-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:4:9-35
+24-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:4:9-35
 25        <activity
-25-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:6:9-34:20
+25-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:6:9-34:20
 26            android:name="com.example.proyectoc4.MainActivity"
-26-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:7:13-41
+26-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:7:13-41
 27            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-27-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:10:13-163
+27-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:10:13-163
 28            android:hardwareAccelerated="true"
-28-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:11:13-47
+28-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:11:13-47
 29            android:launchMode="singleTop"
-29-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:8:13-43
+29-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:8:13-43
 30            android:theme="@style/LaunchTheme"
-30-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:9:13-47
+30-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:9:13-47
 31            android:windowSoftInputMode="adjustResize" >
-31-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:12:13-55
+31-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:12:13-55
 32
 33            <!--
 34                 Specifies an Android theme to apply to this Activity as soon as
@@ -52,11 +52,11 @@
 37                 to determine the Window background behind the Flutter UI.
 38            -->
 39            <meta-data
-39-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:17:13-20:17
+39-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:17:13-20:17
 40                android:name="io.flutter.embedding.android.NormalTheme"
-40-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:18:15-70
+40-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:18:15-70
 41                android:resource="@style/NormalTheme" />
-41-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:19:15-52
+41-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:19:15-52
 42            <!--
 43                 Displays an Android View that continues showing the launch screen
 44                 Drawable until Flutter paints its first frame, then this splash
@@ -65,21 +65,21 @@
 47                 Flutter's first frame.
 48            -->
 49            <meta-data
-49-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:26:13-29:17
+49-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:26:13-29:17
 50                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-50-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:27:15-79
+50-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:27:15-79
 51                android:resource="@drawable/launch_background" />
-51-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:28:15-61
+51-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:28:15-61
 52
 53            <intent-filter>
-53-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:30:13-33:29
+53-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:30:13-33:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:31:17-68
-54-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:31:25-66
+54-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:31:17-68
+54-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:31:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:32:17-76
-56-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:32:27-74
+56-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:32:17-76
+56-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:32:27-74
 57            </intent-filter>
 58        </activity>
 59        <!--
@@ -87,80 +87,89 @@
 61             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 62        -->
 63        <meta-data
-63-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:37:9-39:33
+63-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:37:9-39:33
 64            android:name="flutterEmbedding"
-64-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:38:13-44
+64-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:38:13-44
 65            android:value="2" />
-65-->D:\proyectoc4\android\app\src\main\AndroidManifest.xml:39:13-30
+65-->D:\Proyectos Mintic\proyectoc4\android\app\src\main\AndroidManifest.xml:39:13-30
 66
 67        <service
-67-->[:firebase_database] D:\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+67-->[:firebase_database] D:\Proyectos Mintic\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 68            android:name="com.google.firebase.components.ComponentDiscoveryService"
-68-->[:firebase_database] D:\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+68-->[:firebase_database] D:\Proyectos Mintic\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
 69            android:directBootAware="true"
-69-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+69-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
 70            android:exported="false" >
-70-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:19:13-37
+70-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:19:13-37
 71            <meta-data
-71-->[:firebase_database] D:\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+71-->[:firebase_database] D:\Proyectos Mintic\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 72                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-72-->[:firebase_database] D:\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
+72-->[:firebase_database] D:\Proyectos Mintic\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
 73                android:value="com.google.firebase.components.ComponentRegistrar" />
-73-->[:firebase_database] D:\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+73-->[:firebase_database] D:\Proyectos Mintic\proyectoc4\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 74            <meta-data
-74-->[:cloud_firestore] D:\proyectoc4\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+74-->[:cloud_firestore] D:\Proyectos Mintic\proyectoc4\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 75                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-75-->[:cloud_firestore] D:\proyectoc4\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
+75-->[:cloud_firestore] D:\Proyectos Mintic\proyectoc4\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 76                android:value="com.google.firebase.components.ComponentRegistrar" />
-76-->[:cloud_firestore] D:\proyectoc4\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+76-->[:cloud_firestore] D:\Proyectos Mintic\proyectoc4\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 77            <meta-data
-77-->[:firebase_core] D:\proyectoc4\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+77-->[:firebase_core] D:\Proyectos Mintic\proyectoc4\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 78                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-78-->[:firebase_core] D:\proyectoc4\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+78-->[:firebase_core] D:\Proyectos Mintic\proyectoc4\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 79                android:value="com.google.firebase.components.ComponentRegistrar" />
-79-->[:firebase_core] D:\proyectoc4\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+79-->[:firebase_core] D:\Proyectos Mintic\proyectoc4\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 80            <meta-data
-80-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:20:13-22:85
+80-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:20:13-22:85
 81                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-81-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:21:17-111
+81-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:21:17-111
 82                android:value="com.google.firebase.components.ComponentRegistrar" />
-82-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:22:17-82
+82-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\875fba2a3c7d150fb639a449876b754f\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:22:17-82
 83            <meta-data
-83-->[com.google.firebase:firebase-database:20.0.2] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\025205453b3529bc2319109ed17c0a94\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
+83-->[com.google.firebase:firebase-database:20.0.2] C:\Users\User\.gradle\caches\transforms-2\files-2.1\025205453b3529bc2319109ed17c0a94\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
 84                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-84-->[com.google.firebase:firebase-database:20.0.2] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\025205453b3529bc2319109ed17c0a94\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+84-->[com.google.firebase:firebase-database:20.0.2] C:\Users\User\.gradle\caches\transforms-2\files-2.1\025205453b3529bc2319109ed17c0a94\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
 85                android:value="com.google.firebase.components.ComponentRegistrar" />
-85-->[com.google.firebase:firebase-database:20.0.2] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\025205453b3529bc2319109ed17c0a94\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+85-->[com.google.firebase:firebase-database:20.0.2] C:\Users\User\.gradle\caches\transforms-2\files-2.1\025205453b3529bc2319109ed17c0a94\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
 86        </service>
 87
-88        <provider
-88-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-89            android:name="com.google.firebase.provider.FirebaseInitProvider"
-89-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-90            android:authorities="com.example.proyectoc4.firebaseinitprovider"
-90-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-91            android:directBootAware="true"
-91-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-92            android:exported="false"
-92-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-93            android:initOrder="100" />
-93-->[com.google.firebase:firebase-common:20.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-94
-95        <activity
-95-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-96            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-96-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+88        <activity
+88-->[:url_launcher] D:\Proyectos Mintic\proyectoc4\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+89            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+89-->[:url_launcher] D:\Proyectos Mintic\proyectoc4\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+90            android:exported="false"
+90-->[:url_launcher] D:\Proyectos Mintic\proyectoc4\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+91            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+91-->[:url_launcher] D:\Proyectos Mintic\proyectoc4\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+92
+93        <provider
+93-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+94            android:name="com.google.firebase.provider.FirebaseInitProvider"
+94-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+95            android:authorities="com.example.proyectoc4.firebaseinitprovider"
+95-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+96            android:directBootAware="true"
+96-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
 97            android:exported="false"
-97-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-98            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-98-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+97-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+98            android:initOrder="100" />
+98-->[com.google.firebase:firebase-common:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e8c12af64c0d197211b7d090cb61cdf8\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
 99
-100        <meta-data
-100-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e31537fb3ca3accaea0d4d9ddb9631cc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-101            android:name="com.google.android.gms.version"
-101-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e31537fb3ca3accaea0d4d9ddb9631cc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-102            android:value="@integer/google_play_services_version" />
-102-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\migue\.gradle\caches\transforms-2\files-2.1\e31537fb3ca3accaea0d4d9ddb9631cc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-103    </application>
+100        <activity
+100-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+101            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+101-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+102            android:exported="false"
+102-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+103            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+103-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\0813e45a0b3806629b40dbeb70c75a60\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
 104
-105</manifest>
+105        <meta-data
+105-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e31537fb3ca3accaea0d4d9ddb9631cc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+106            android:name="com.google.android.gms.version"
+106-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e31537fb3ca3accaea0d4d9ddb9631cc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+107            android:value="@integer/google_play_services_version" />
+107-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\e31537fb3ca3accaea0d4d9ddb9631cc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+108    </application>
+109
+110</manifest>
