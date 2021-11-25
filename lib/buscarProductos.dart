@@ -74,7 +74,7 @@ class buscarDato extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   //  final Stream<QuerySnapshot> consultar=FirebaseFirestore.instance.collection("Negocios").where('Nombre',isEqualTo:informacion).snapshots();
-    final Stream<QuerySnapshot> consultar=FirebaseFirestore.instance.collection("Negocio").where('Menu',arrayContainsAny:[informacion]).snapshots();
+    final Stream<QuerySnapshot> consultar=FirebaseFirestore.instance.collection("Negocio").where('Menu' ,arrayContainsAny:[informacion]).snapshots();
     return StreamBuilder<QuerySnapshot> (
       stream: consultar,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot>snapshot){

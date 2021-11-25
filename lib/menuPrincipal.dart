@@ -3,6 +3,7 @@ import 'package:proyectoc4/listaNegocios.dart';
 import 'buscarProductos.dart';
 import 'fondosPantalla.dart';
 import 'listaNegocios.dart';
+import 'Compras.dart';
 
 
 class MenuPrincipal extends StatelessWidget {
@@ -19,20 +20,11 @@ class MenuPrincipal extends StatelessWidget {
             child: Column(
               children:[
 
-                Container(
+
+                Image.asset(
+                  "imagenes/mooi.jpg",
+                  width: 300,
                   height: 150,
-                  child: Center(
-                    child: Text("Menu principal",
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.black87,
-                          decoration: TextDecoration.overline,
-                          decorationColor: Colors.black,
-                          decorationStyle: TextDecorationStyle.double,
-                      )
-                    )
-                  ),
                 ),
 
                 Container(
@@ -40,7 +32,8 @@ class MenuPrincipal extends StatelessWidget {
                     alignment: Alignment.center,
                     child: ElevatedButton(
                       style: TextButton.styleFrom(
-                        primary: Colors.red
+                        primary: Colors.white,
+                        backgroundColor: Colors.white.withAlpha(200)
                       ),
 
                       child: Text('Buscar productos',
@@ -67,7 +60,8 @@ class MenuPrincipal extends StatelessWidget {
                     alignment: Alignment.center,
                     child: ElevatedButton(
                         style: TextButton.styleFrom(
-                            primary: Colors.red
+                            primary: Colors.red,
+                            backgroundColor: Colors.white.withAlpha(200)
                         ),
 
                         child: Text('Negocios registrados en la App',
@@ -88,7 +82,33 @@ class MenuPrincipal extends StatelessWidget {
                         }
                     )
                 ),
+                Container(
+                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                    alignment: Alignment.center,
+                    child: ElevatedButton(
+                        style: TextButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.white.withAlpha(200)
+                        ),
 
+                        child: Text('Compras',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.black
+                            )
+                        ),
+
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Compras()
+                              )
+                          );
+                        }
+                    )
+                ),
 
               ]
             ),

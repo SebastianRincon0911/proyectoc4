@@ -1,8 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
-
 import 'package:proyectoc4/DescripcionNegocio.dart';
+import 'fondosPantalla.dart';
 
 
 class ListarNegocios extends StatelessWidget {
@@ -10,15 +10,25 @@ class ListarNegocios extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("App Tiendas"),
-        ),
-        body: ConsultaClientes(),
+    return Stack(
+        children:[
+          fondoBuscarProductos(),
+          Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+              backgroundColor: Colors.black87,
+              toolbarHeight: 48,
+              title: Text("Negocios Disponibles",
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+            body: ConsultaClientes(),
 
 
-      ),
+          ),
+        ]
     );
   }
 }
@@ -50,15 +60,18 @@ class _ConsultaClientes extends State<ConsultaClientes> {
               Map<String, dynamic> data = document.data()! as Map<String, dynamic>;
 
               return Container(
-                  color: Colors.yellow,
+                  color: Colors.white70,
                   margin: EdgeInsets.only(top: 5),
                   child: ListTile(
                     title: Text(data["Nombre"]),
-                    subtitle: Text(data["Telefono"]),
+                    subtitle: Text(data["Direccion"]),
+                    leading: Image.network(data['Logo']),
                     onTap: (){
-                      Negocio neg = Negocio(data["Actividad"], data["Categoria"], data["Codigo"], data["Direccion"], data["Geolocalizacion"], data["Nombre"], data["Telefono"], data["Web"]);
+                      Negocio neg = Negocio(data["Foto"],data["Nombre"], data["Direccion"], data["Geolocalizacion"], data["Celular"], data["Telefono"], data["Web"]);
                       Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DescripcionNegocio(neg) ));
+                          builder: (context) => DescripcionNegocio(neg)
+                      )
+                      );
                     },
 
                   )
@@ -73,16 +86,15 @@ class _ConsultaClientes extends State<ConsultaClientes> {
 
 
 class Negocio{
-  String actividad="";
-  String categoria="";
-  String codigo="";
+  String foto="";
+  String nombre="";
   String direccion="";
   String geolocalizacion="";
-  String nombre="";
+  String celular="";
   String telefono="";
   String web="";
 
-  Negocio(this.actividad, this.categoria, this.codigo, this.direccion,
-      this.geolocalizacion, this.nombre, this.telefono, this.web);
+  Negocio(this.foto, this.nombre, this.direccion, this.geolocalizacion,
+      this.celular, this.telefono, this.web);
 
 }

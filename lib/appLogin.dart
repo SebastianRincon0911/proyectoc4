@@ -92,13 +92,13 @@ class _PantallaState extends State<Pantalla> {
                       alignment: Alignment.center,
                       child: ElevatedButton(
                         style: TextButton.styleFrom(
-                          primary: Colors.red,
+                          primary: Colors.black87,
                         ),
 
                         child: Text('Ingresar',
                             style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.black
+                                color: Colors.white
                             ),
                           ),
 
