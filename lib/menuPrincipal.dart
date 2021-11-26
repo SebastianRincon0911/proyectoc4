@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:proyectoc4/buscarNegocio.dart';
+import 'package:proyectoc4/buscarNegocioActividad.dart';
 import 'package:proyectoc4/listaNegocios.dart';
 import 'package:proyectoc4/registroCliente.dart';
 import 'buscarProductos.dart';
@@ -37,7 +39,7 @@ class MenuPrincipal extends StatelessWidget {
                         backgroundColor: Colors.white.withAlpha(200)
                       ),
 
-                      child: Text('Buscar productos',
+                      child: Text('Buscar por tipo de producto',
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w300,
@@ -53,6 +55,33 @@ class MenuPrincipal extends StatelessWidget {
                             )
                         );
                       }
+                    )
+                ),
+                Container(
+                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                    alignment: Alignment.center,
+                    child: ElevatedButton(
+                        style: TextButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.white.withAlpha(200)
+                        ),
+
+                        child: Text('Buscar por categoria de negocio',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.black
+                            )
+                        ),
+
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => buscarNegocioCategoria()
+                              )
+                          );
+                        }
                     )
                 ),
 
@@ -92,7 +121,7 @@ class MenuPrincipal extends StatelessWidget {
                             backgroundColor: Colors.white.withAlpha(200)
                         ),
 
-                        child: Text('Buscar negocios por actividad',
+                        child: Text('Negocios por actividad',
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w300,
@@ -104,7 +133,7 @@ class MenuPrincipal extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListarNegocios()
+                                  builder: (context) => buscarNegocioActividad()
                               )
                           );
                         }

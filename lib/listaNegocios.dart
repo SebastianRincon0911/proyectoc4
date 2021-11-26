@@ -67,7 +67,8 @@ class _ConsultaClientes extends State<ConsultaClientes> {
                     subtitle: Text(data["Direccion"]),
                     leading: Image.network(data['Logo']),
                     onTap: (){
-                      Negocio neg = Negocio(data["Foto"],data["Nombre"], data["Direccion"], data["Geolocalizacion"], data["Celular"], data["Telefono"], data["Web"]);
+                      Negocio neg = Negocio(data["Foto"],data["Nombre"], data["Direccion"],
+                          data["Geolocalizacion"], data["Celular"], data["Telefono"], data["Web"],data["Actividad"],data["Categoria"]);
                       Navigator.push(context, MaterialPageRoute(
                           builder: (context) => DescripcionNegocio(neg)
                       )
@@ -93,8 +94,9 @@ class Negocio{
   String celular="";
   String telefono="";
   String web="";
+  String actividad="";
+  String categoria="";
 
   Negocio(this.foto, this.nombre, this.direccion, this.geolocalizacion,
-      this.celular, this.telefono, this.web);
-
+      this.celular, this.telefono, this.web, this.actividad, this.categoria);
 }

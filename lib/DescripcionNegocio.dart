@@ -31,7 +31,7 @@ class _DescripcionState extends State<DescripcionNegocio> {
             ),
             body: Container(
               padding: EdgeInsets.all(10),
-              height: 400,
+              height: 500,
               child: Card(
                 color: Colors.black54,
                 elevation: 10,
@@ -42,11 +42,30 @@ class _DescripcionState extends State<DescripcionNegocio> {
                 child: Center(
                   child: Column(
                     children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                      ),
                       Image.network(widget.negocio.foto,width: 330),
                       //Image.asset("img/ico.png",width: 100,),
                       //Text(widget.cliente.imagen),
+
                       Container(
                         padding: EdgeInsets.all(10),
+                        alignment: Alignment.center,
+                        child: Text("Direccion: "+widget.negocio.direccion
+                            + "\n" +"Telefono: "+widget.negocio.telefono
+                            + "\n" +"Celular: "+widget.negocio.celular
+                            + "\n" +"Categoria: "+widget.negocio.categoria
+                            + "\n" +"Actividad: "+widget.negocio.actividad,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),),
+                      ),
+
+
+                      Container(
+                        padding: EdgeInsets.all(5),
                         alignment: Alignment.center,
                         child: RaisedButton.icon(
                           color: Colors.white,

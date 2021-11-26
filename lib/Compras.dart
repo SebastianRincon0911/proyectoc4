@@ -70,7 +70,7 @@ class BuscarProducto extends StatelessWidget{
     return Column(
       children: [
         Expanded(
-          flex: 2,
+          flex: 4,
             child: StreamBuilder<QuerySnapshot>(
 
           stream: consultar,
@@ -111,7 +111,7 @@ class BuscarProducto extends StatelessWidget{
         Expanded(
             flex: 1,
             child: Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(20),
           margin: EdgeInsets.only(bottom: 20),
           color: Colors.lightGreen,
           height: 100,
