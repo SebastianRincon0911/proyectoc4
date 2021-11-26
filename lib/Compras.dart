@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:proyectoc4/miCompra.dart';
-
 import 'fondosPantalla.dart';
 
 class Compras extends StatefulWidget {
@@ -70,7 +69,7 @@ class BuscarProducto extends StatelessWidget{
     return Column(
       children: [
         Expanded(
-          flex: 4,
+          flex: 5,
             child: StreamBuilder<QuerySnapshot>(
 
           stream: consultar,
