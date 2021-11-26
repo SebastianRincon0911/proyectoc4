@@ -100,6 +100,7 @@ class buscarDato extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(data['Telefono']+"\n"+data['Direccion']),
+                leading: Image.network(data["Logo"]),
               ),
 
             );

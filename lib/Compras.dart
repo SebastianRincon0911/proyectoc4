@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:proyectoc4/miCompra.dart';
 
 import 'fondosPantalla.dart';
 
@@ -66,39 +67,89 @@ class BuscarProducto extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final Stream<QuerySnapshot>consultar=FirebaseFirestore.instance.collection("Producto").where("Negocio",isEqualTo:producto).snapshots();
-    return StreamBuilder<QuerySnapshot>(
+    return Column(
+      children: [
+        Expanded(
+          flex: 2,
+            child: StreamBuilder<QuerySnapshot>(
 
-      stream: consultar,
-      builder:(context,AsyncSnapshot<QuerySnapshot>snapshot){
-  if(!snapshot.hasData){
-    return Center(child:CircularProgressIndicator(),);
-  }
-  return ListView(
-      children: snapshot.data!.docs.map((DocumentSnapshot document){
-        Map<String, dynamic> data=document.data()! as Map<String,dynamic>;
-        return Container(
-          color: Colors.white,
-          margin: EdgeInsets.only(top:5),
-          child: ListTile(
-            title: Text(data['Producto']),
-              subtitle: Text(data['Precio']),
-            onTap:(){
-          lista.add(data['Producto']);
-          lista.add(data['Precio']);
-          print(lista);
+          stream: consultar,
+          builder:(context,AsyncSnapshot<QuerySnapshot>snapshot){
+            if(!snapshot.hasData){
+              return Center(child:CircularProgressIndicator(),);
+            }
+            return ListView(
+                children: snapshot.data!.docs.map((DocumentSnapshot document){
+                  Map<String, dynamic> data=document.data()! as Map<String,dynamic>;
+                  return Container(
+                    color: Colors.white,
+                    margin: EdgeInsets.only(top:5),
+                    child: ListTile(
+                      title: Text(data['Producto']),
+                      subtitle: Text(data['Precio']),
+                      leading: Image.network(data['Logo']),
+                      onTap:(){
+                        lista.add(data['Producto']);
+                        lista.add(data['Precio']);
+                        print(lista);
+                      },
+                    ),
+
+
+                  );
+
+                }
+                ).toList()
+            );
+
+
           },
+
+        )
+        ),
+        
+        Expanded(
+            flex: 1,
+            child: Container(
+          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.only(bottom: 20),
+          color: Colors.lightGreen,
+          height: 100,
+          alignment: Alignment.center,
+          child: ElevatedButton.icon(
+            label: Text("Agregar al carrito",
+            textAlign: TextAlign.center,
+              ),
+            icon: Icon(Icons.add_moderator,
+            size: 30,
+            color: Colors.white,),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.lightBlue,
+              onPrimary: Colors.orange,
+              onSurface: Colors.red,
+              elevation: 10,
+              shape: BeveledRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5))
+              ),
+              textStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.normal
+              )
             ),
+            onPressed: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ListaCompras(lista: lista,))
+              );
 
 
-        );
+            },
 
-      }
-      ).toList()
-  );
+          ),
 
-
-      },
-
+        )
+        )
+      ],
     );
   }
 }
