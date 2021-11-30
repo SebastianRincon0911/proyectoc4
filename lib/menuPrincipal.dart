@@ -61,7 +61,7 @@ class MenuPrincipal extends StatelessWidget {
                               onTap: (){
                                 Navigator.of(context).pop();
                                 Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                  MaterialPageRoute(builder: (context)=> buscar()),
                                 );
                               }
                           )
@@ -80,7 +80,7 @@ class MenuPrincipal extends StatelessWidget {
                               onTap: (){
                                 Navigator.of(context).pop();
                                 Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                  MaterialPageRoute(builder: (context)=> ListarNegocios()),
                                 );
                               }
                           )
@@ -118,7 +118,7 @@ class MenuPrincipal extends StatelessWidget {
                               onTap: (){
                                   Navigator.of(context).pop();
                                   Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                  MaterialPageRoute(builder: (context)=> buscarNegocioCategoria()),
                                   );
                               }
                           )
@@ -137,7 +137,7 @@ class MenuPrincipal extends StatelessWidget {
                               onTap: (){
                                 Navigator.of(context).pop();
                                 Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                  MaterialPageRoute(builder: (context)=> buscarNegocioActividad()),
                                 );
                               }
                           )
