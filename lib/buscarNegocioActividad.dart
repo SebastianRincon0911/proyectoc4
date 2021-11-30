@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:proyectoc4/index.dart';
 
 import 'fondosPantalla.dart';
 
@@ -21,6 +22,7 @@ class _buscarNegocioActividadState extends State<buscarNegocioActividad> {
         children:[
           fondoNegoActividad(),
           Scaffold(
+              drawer: MenuLateral(),
               backgroundColor: Colors.transparent,
               appBar: AppBar(
                   toolbarHeight: 52,

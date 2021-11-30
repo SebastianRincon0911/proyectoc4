@@ -126,7 +126,7 @@ class BuscarProducto extends StatelessWidget{
                           color: Colors.black87
                         )
                       ),
-                      icon: Icon(Icons.add_moderator,
+                      icon: Icon(Icons.add_shopping_cart,
                       size: 30,
                       color: Colors.black87
                       ),

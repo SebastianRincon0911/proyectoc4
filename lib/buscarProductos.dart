@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:proyectoc4/index.dart';
 
 import 'fondosPantalla.dart';
 
@@ -22,6 +23,7 @@ class _buscarState extends State<buscar> {
         fondoBuscarProductos(),
         Scaffold(
             backgroundColor: Colors.transparent,
+            drawer: MenuLateral(),
             appBar: AppBar(
                 toolbarHeight: 52,
                 backgroundColor: Colors.black45,

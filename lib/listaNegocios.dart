@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:proyectoc4/DescripcionNegocio.dart';
+import 'package:proyectoc4/index.dart';
 import 'fondosPantalla.dart';
 
 
@@ -24,6 +25,7 @@ class ListarNegocios extends StatelessWidget {
                 ),
               ),
             ),
+            drawer: MenuLateral(),
             body: ConsultaClientes(),
           ),
         ]

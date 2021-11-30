@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:proyectoc4/buscarNegocio.dart';
 import 'package:proyectoc4/buscarNegocioActividad.dart';
+import 'package:proyectoc4/index.dart';
 import 'package:proyectoc4/listaNegocios.dart';
 import 'buscarProductos.dart';
 import 'fondosPantalla.dart';
@@ -32,120 +33,7 @@ class MenuPrincipal extends StatelessWidget {
                 )
             ),
 
-            drawer: Drawer(
-                child: ListView(
-                    children: [
-                      UserAccountsDrawerHeader(
-                          accountName: Text("Mooi Products",
-                              style: TextStyle(
-                                color: Colors.white)),
-                          accountEmail: Text('Bienvenido!!!',
-                              style: TextStyle(
-                                  color: Colors.white)),
-                          currentAccountPicture: Image.asset('imagenes/mooi.jpg'),
-                          decoration: BoxDecoration(
-                            color: Colors.black87
-                          )
-                      ),
-
-                      Container(
-                          color: Colors.black26,
-                          margin: EdgeInsets.all(3),
-                          child: ListTile(
-                              title: Text("Buscar",
-                                style: TextStyle(
-                                    color: Colors.black
-                                ),
-                              ),
-                              leading: Image.asset('imagenes/buscar3.jpg'),
-                              onTap: (){
-                                Navigator.of(context).pop();
-                                Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> buscar()),
-                                );
-                              }
-                          )
-                      ),
-
-                      Container(
-                          color: Colors.black26,
-                          margin: EdgeInsets.all(3),
-                          child: ListTile(
-                              title: Text("Negocios",
-                                style: TextStyle(
-                                    color: Colors.black
-                                ),
-                              ),
-                              leading: Image.asset('imagenes/negocios1.jpg'),
-                              onTap: (){
-                                Navigator.of(context).pop();
-                                Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> ListarNegocios()),
-                                );
-                              }
-                          )
-                      ),
-
-                      Container(
-                          color: Colors.black26,
-                          margin: EdgeInsets.all(3),
-                          child: ListTile(
-                              title: Text("Compras",
-                                style: TextStyle(
-                                    color: Colors.black
-                                ),
-                              ),
-                              leading: Image.asset('imagenes/compras1.jpg'),
-                              onTap: (){
-                                Navigator.of(context).pop();
-                                Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> Compras()),
-                                );
-                              }
-                          )
-                      ),
-
-                      Container(
-                          color: Colors.black26,
-                          margin: EdgeInsets.all(3),
-                          child: ListTile(
-                              title: Text("Categorias",
-                                style: TextStyle(
-                                    color: Colors.black
-                                ),
-                              ),
-                              leading: Image.asset('imagenes/categorias.jpg'),
-                              onTap: (){
-                                  Navigator.of(context).pop();
-                                  Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> buscarNegocioCategoria()),
-                                  );
-                              }
-                          )
-                      ),
-
-                      Container(
-                          color: Colors.black26,
-                          margin: EdgeInsets.all(3),
-                          child: ListTile(
-                              title: Text("Actividad",
-                              style: TextStyle(
-                                color: Colors.black
-                              ),
-                              ),
-                              leading: Image.asset('imagenes/actividad1.jpg'),
-                              onTap: (){
-                                Navigator.of(context).pop();
-                                Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=> buscarNegocioActividad()),
-                                );
-                              }
-                          )
-                      ),
-                    ]
-                )
-            ),
-
+            drawer: MenuLateral(),
             body: SafeArea(
               child: Column(
                 children:[
