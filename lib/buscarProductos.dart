@@ -79,7 +79,7 @@ class buscarDato extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot>snapshot){
 
         if(!snapshot.hasData){
-          return Center(child: CircularProgressIndicator(),);
+          return Center(child: CircularProgressIndicator());
         }
 
         if(informacion.isNotEmpty){
@@ -101,7 +101,6 @@ class buscarDato extends StatelessWidget {
                 subtitle: Text(data['Telefono']+"\n"+data['Direccion']),
                 leading: Image.network(data["Logo"]),
               ),
-
             );
           }
           ).toList()

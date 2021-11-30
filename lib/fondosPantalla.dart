@@ -7,7 +7,7 @@ class fondoLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(
         shaderCallback: (bounds) => LinearGradient(
-          colors: [Colors.white, Colors.white],
+          colors: [Colors.black26, Colors.black26],
         ).createShader(bounds),
         blendMode: BlendMode.darken,
         child: Container(
@@ -30,13 +30,13 @@ class fondoMenuPrincipal extends StatelessWidget {
     return ShaderMask(
         shaderCallback: (bounds) =>
             LinearGradient(
-              colors: [Colors.white, Colors.white],
+              colors: [Colors.black26, Colors.black26],
             ).createShader(bounds),
         blendMode: BlendMode.darken,
         child: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('imagenes/menu.jpg'),
+                  image: AssetImage('imagenes/fondo2.jpg'),
                   fit: BoxFit.cover,
                 )
             )
@@ -58,7 +58,7 @@ class fondoBuscarProductos extends StatelessWidget {
         child: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('imagenes/buscar1.jpg'),
+                  image: AssetImage('imagenes/comida.jpg'),
                   fit: BoxFit.cover,
                 )
             )
@@ -102,6 +102,72 @@ class Comprasfondo extends StatelessWidget {
             decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('imagenes/cafe.jpg'),
+                  fit: BoxFit.cover,
+                )
+            )
+        )
+    );
+  }
+}
+
+class fondoRegistro extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask(
+        shaderCallback: (bounds) =>
+            LinearGradient(
+              colors: [Colors.black26, Colors.black26],
+            ).createShader(bounds),
+        blendMode: BlendMode.darken,
+        child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('imagenes/registro4.jpg'),
+                  fit: BoxFit.cover,
+                )
+            )
+        )
+    );
+  }
+}
+
+class fondoNegoActividad extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask(
+        shaderCallback: (bounds) =>
+            LinearGradient(
+              colors: [Colors.black26, Colors.black26],
+            ).createShader(bounds),
+        blendMode: BlendMode.darken,
+        child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('imagenes/comida2.jpg'),
+                  fit: BoxFit.cover,
+                )
+            )
+        )
+    );
+  }
+}
+
+class fondocategorias extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask(
+        shaderCallback: (bounds) =>
+            LinearGradient(
+              colors: [Colors.black26, Colors.black26],
+            ).createShader(bounds),
+        blendMode: BlendMode.darken,
+        child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('imagenes/comida3.jpg'),
                   fit: BoxFit.cover,
                 )
             )

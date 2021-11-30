@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import 'fondosPantalla.dart';
+
 class RegistroClientes extends StatefulWidget {
   const RegistroClientes({Key? key}) : super(key: key);
 
@@ -19,11 +21,20 @@ class _RegistroClientesState extends State<RegistroClientes> {
   CollectionReference pro = FirebaseFirestore.instance.collection("clientes");
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Productos"),
-        ),
+    return Stack(
+        children:[
+            fondoRegistro(),
+            Scaffold(
+                backgroundColor: Colors.transparent,
+                appBar: AppBar(
+                    backgroundColor: Colors.black87,
+                    toolbarHeight: 48,
+                    title: Text("Registro",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                        ),
+                    ),
+                ),
         body: ListView(
           children: [
             Container(
@@ -73,14 +84,20 @@ class _RegistroClientesState extends State<RegistroClientes> {
             ),
 
             Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.only(top:50),
               alignment: Alignment.center,
-              child: ElevatedButton.icon(
-                label: Text("Registrar",textAlign: TextAlign.center,
+              child: RaisedButton.icon(
+                color: Colors.black54,
+                label: Text("Registrar",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
                 icon: Icon(
-                  Icons.ac_unit,
+                  Icons.add_box,
                   size: 20,
+                  color: Colors.lightGreen,
                 ),
 
                 onPressed: (){
@@ -110,16 +127,20 @@ class _RegistroClientesState extends State<RegistroClientes> {
             ),
 
             Container(
-              padding: EdgeInsets.all(2),
+              padding: EdgeInsets.only(top:20),
               alignment: Alignment.center,
-              child: ElevatedButton.icon(
-
+              child: RaisedButton.icon(
+                color: Colors.black54,
                 label: Text("Actualizar",
                   textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white
+                    )
                 ),
                 icon: Icon(
-                  Icons.ac_unit,
+                  Icons.find_replace,
                   size: 20,
+                  color: Colors.lightGreen,
                 ),
 
                 onPressed: (){
@@ -145,15 +166,20 @@ class _RegistroClientesState extends State<RegistroClientes> {
             ),
 
             Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.only(top:20),
               alignment: Alignment.center,
-              child: ElevatedButton.icon(
+              child: RaisedButton.icon(
+                color: Colors.black54,
                 label: Text("Eliminar",
                   textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white
+                  )
                 ),
                 icon: Icon(
-                  Icons.ac_unit,
+                  Icons.auto_delete,
                   size: 20,
+                  color: Colors.lightGreen,
                 ),
 
                 onPressed: (){
@@ -174,6 +200,7 @@ class _RegistroClientesState extends State<RegistroClientes> {
           ],
         ),
       ),
+    ]
     );
   }
 }
