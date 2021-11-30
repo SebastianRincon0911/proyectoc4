@@ -12,7 +12,7 @@ class ListarNegocios extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
         children:[
-          fondoBuscarProductos(),
+          fondoRegistro(),
           Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBar(
@@ -25,8 +25,6 @@ class ListarNegocios extends StatelessWidget {
               ),
             ),
             body: ConsultaClientes(),
-
-
           ),
         ]
     );
@@ -69,12 +67,12 @@ class _ConsultaClientes extends State<ConsultaClientes> {
                     onTap: (){
                       Negocio neg = Negocio(data["Foto"],data["Nombre"], data["Direccion"],
                           data["Geolocalizacion"], data["Celular"], data["Telefono"], data["Web"],data["Actividad"],data["Categoria"]);
-                      Navigator.push(context, MaterialPageRoute(
+                      Navigator.push(context,
+                          MaterialPageRoute(
                           builder: (context) => DescripcionNegocio(neg)
-                      )
+                          )
                       );
                     },
-
                   )
               );
             }

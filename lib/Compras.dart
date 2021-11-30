@@ -18,42 +18,53 @@ class _ComprasState extends State<Compras> {
     return Stack(
         children:[
           Comprasfondo(),
-    Scaffold(
-    backgroundColor: Colors.transparent,
-    appBar: AppBar(
+          Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBar(
+                  toolbarHeight: 48,
+                  backgroundColor: Colors.black,
+                  title: Text('Compras',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400
+                      )
+                  )
+              ),
+
+              body:Center(
+                child: SizedBox(
+                    width: 350,
+                    child:Column(
+                        children: [
+
+                            Container(
+                              padding:EdgeInsets.all(5),
+                              child: TextField(
+                                controller: buscar,
+                                onChanged: (value){
+                                  setState(() {
+
+                                  }
+                                  );
+                                },
+                                decoration: InputDecoration(
+                                  hintText: 'Digite el negocio'
+                                )
+                              )
+                            ),
+
+                            Expanded(
+                                child: BuscarProducto(
+                                    producto:buscar.text)
+                            )
+                        ],
+                    ),
+                ),
+              )
           ),
-body:Center(
-  child: SizedBox(
-width: 350,
-    child:Column(
-      children: [
-
-        Container(
-          padding:EdgeInsets.all(5),
-          child: TextField(
-            controller: buscar,
-            onChanged: (value){
-              setState(() {
-
-              }
-              );
-            },
-            decoration: InputDecoration(
-              hintText: 'Digite el negocio'
-            )
-          )
-        ),
-        Expanded(
-            child: BuscarProducto(
-                producto:buscar.text))
-      ],
-    ),
-  ),
-)
-      ),
         ],
     );
-
   }
 }
 
@@ -88,65 +99,60 @@ class BuscarProducto extends StatelessWidget{
                       subtitle: Text(data['Precio']),
                       leading: Image.network(data['Logo']),
                       onTap:(){
-                        lista.add(data['Producto']);
-                        lista.add(data['Precio']);
+                        lista.add([data['Producto'],data['Precio']]);
                         print(lista);
                       },
                     ),
-
-
                   );
-
                 }
                 ).toList()
             );
-
-
-          },
-
-        )
+            },
+            )
         ),
         
         Expanded(
             flex: 1,
             child: Container(
-          padding: EdgeInsets.all(20),
-          margin: EdgeInsets.only(bottom: 20),
-          color: Colors.lightGreen,
-          height: 100,
-          alignment: Alignment.center,
-          child: ElevatedButton.icon(
-            label: Text("Agregar al carrito",
-            textAlign: TextAlign.center,
-              ),
-            icon: Icon(Icons.add_moderator,
-            size: 30,
-            color: Colors.white,),
-            style: ElevatedButton.styleFrom(
-              primary: Colors.lightBlue,
-              onPrimary: Colors.orange,
-              onSurface: Colors.red,
-              elevation: 10,
-              shape: BeveledRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(5))
-              ),
-              textStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.normal
-              )
-            ),
-            onPressed: (){
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ListaCompras(lista: lista,))
-              );
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.only(bottom: 20),
+                color: Colors.black54,
+                height: 100,
+                alignment: Alignment.center,
+                child: ElevatedButton.icon(
+                      label: Text("Agregar al carrito",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black87
+                        )
+                      ),
+                      icon: Icon(Icons.add_moderator,
+                      size: 30,
+                      color: Colors.black87
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.white70,
+                          onPrimary: Colors.orange,
+                          onSurface: Colors.red,
+                          elevation: 10,
+                          shape: BeveledRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(5))
+                          ),
+                          textStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal
+                          )
+                      ),
 
-
-            },
-
-          ),
-
-        )
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) =>
+                                ListaCompras(lista: lista,))
+                        );
+                      },
+                ),
+            )
         )
       ],
     );

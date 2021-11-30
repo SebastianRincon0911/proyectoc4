@@ -19,13 +19,13 @@ class _buscarNegocioCategoriaState extends State<buscarNegocioCategoria> {
   Widget build(BuildContext context) {
     return Stack(
         children:[
-          fondoBuscarProductos(),
+          fondocategorias(),
           Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
                   toolbarHeight: 52,
                   backgroundColor: Colors.black45,
-                  title: Text('Consultar negocios',
+                  title: Text('Categorias',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -45,7 +45,7 @@ class _buscarNegocioCategoriaState extends State<buscarNegocioCategoria> {
                               setState(() {});
                             },
                             decoration: InputDecoration(
-                              hintText: 'Digite su busqueda',
+                              hintText: 'Restaurantes/Heladerias...',
 
                             ),
                             style: TextStyle(

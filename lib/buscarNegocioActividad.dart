@@ -19,13 +19,13 @@ class _buscarNegocioActividadState extends State<buscarNegocioActividad> {
   Widget build(BuildContext context) {
     return Stack(
         children:[
-          fondoBuscarProductos(),
+          fondoNegoActividad(),
           Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
                   toolbarHeight: 52,
                   backgroundColor: Colors.black45,
-                  title: Text('Consultar negocios',
+                  title: Text('Actividades',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -45,7 +45,7 @@ class _buscarNegocioActividadState extends State<buscarNegocioActividad> {
                               setState(() {});
                             },
                             decoration: InputDecoration(
-                              hintText: 'Digite su busqueda',
+                              hintText: 'Productos...',
 
                             ),
                             style: TextStyle(
@@ -102,8 +102,7 @@ class buscarDato extends StatelessWidget {
                   subtitle: Text(data['Telefono']+"\n"+data['Direccion']),
                   leading: Image.network(data["Logo"]),
                 ),
-
-              );
+               );
             }
             ).toList()
         );

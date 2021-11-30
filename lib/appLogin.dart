@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:proyectoc4/registroCliente.dart';
 import 'fondosPantalla.dart';
 import 'menuPrincipal.dart';
 
@@ -90,24 +91,25 @@ class _PantallaState extends State<Pantalla> {
                   Container(
                       padding:EdgeInsets.only(right: 40, left: 40, top: 35),
                       alignment: Alignment.center,
-                      child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                          primary: Colors.black87,
-                        ),
-
-                        child: Text('Ingresar',
+                      child: RaisedButton.icon(
+                        color: Colors.black87,
+                        label: Text("Ingresar",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 16,
                                 color: Colors.white
-                            ),
-                          ),
+                            )
+                        ),
+                        icon: Icon(
+                          Icons.assignment_ind,
+                          size: 20,
+                          color: Colors.lightGreen,
+                        ),
 
                           onPressed: () {
                               usu = usuario.text;
                               pas = password.text;
-                              if (usu == "pepe" && pas == "123") {
-                                  print("Bienvenido " + usu);
-                                  Navigator.push(
+                              if (usu == "Pepe" && pas == "123") {
+                                Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                          builder: (context) => MenuPrincipal()),
@@ -115,8 +117,36 @@ class _PantallaState extends State<Pantalla> {
                               }
                           },
                       )
-                  )
-              ]
+                  ),
+
+                  Container(
+                      padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                      alignment: Alignment.center,
+                      child: RaisedButton.icon(
+                          color: Colors.black87,
+                          label: Text("Registrarse",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white
+                              )
+                          ),
+                          icon: Icon(
+                            Icons.fact_check,
+                            size: 20,
+                            color: Colors.lightGreen,
+                          ),
+
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => RegistroClientes()
+                                )
+                            );
+                          }
+                      )
+                  ),
+                ]
               )
             ),
         )

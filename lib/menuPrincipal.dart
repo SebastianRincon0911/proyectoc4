@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:proyectoc4/buscarNegocio.dart';
 import 'package:proyectoc4/buscarNegocioActividad.dart';
 import 'package:proyectoc4/listaNegocios.dart';
-import 'package:proyectoc4/registroCliente.dart';
 import 'buscarProductos.dart';
 import 'fondosPantalla.dart';
 import 'listaNegocios.dart';
@@ -18,183 +19,282 @@ class MenuPrincipal extends StatelessWidget {
       children:[
         fondoMenuPrincipal(),
         Scaffold(
-          backgroundColor: Colors.transparent,
-          body: SafeArea(
-            child: Column(
-              children:[
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+                toolbarHeight: 48,
+                backgroundColor: Colors.black,
+                title: Text('Menu Principal',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400
+                    )
+                )
+            ),
 
-
-                Image.asset(
-                  "imagenes/mooi.jpg",
-                  width: 300,
-                  height: 150,
-                ),
-
-                Container(
-                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
-                    alignment: Alignment.center,
-                    child: ElevatedButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.white,
-                        backgroundColor: Colors.white.withAlpha(200)
+            drawer: Drawer(
+                child: ListView(
+                    children: [
+                      UserAccountsDrawerHeader(
+                          accountName: Text("Mooi Products",
+                              style: TextStyle(
+                                color: Colors.white)),
+                          accountEmail: Text('Bienvenido!!!',
+                              style: TextStyle(
+                                  color: Colors.white)),
+                          currentAccountPicture: Image.asset('imagenes/mooi.jpg'),
+                          decoration: BoxDecoration(
+                            color: Colors.black87
+                          )
                       ),
 
-                      child: Text('Buscar por tipo de producto',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.black
-                        )
+                      Container(
+                          color: Colors.black26,
+                          margin: EdgeInsets.all(3),
+                          child: ListTile(
+                              title: Text("Buscar",
+                                style: TextStyle(
+                                    color: Colors.black
+                                ),
+                              ),
+                              leading: Image.asset('imagenes/buscar3.jpg'),
+                              onTap: (){
+                                Navigator.of(context).pop();
+                                Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                );
+                              }
+                          )
                       ),
 
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => buscar()
-                            )
-                        );
-                      }
-                    )
-                ),
-                Container(
-                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
-                    alignment: Alignment.center,
-                    child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.white.withAlpha(200)
-                        ),
+                      Container(
+                          color: Colors.black26,
+                          margin: EdgeInsets.all(3),
+                          child: ListTile(
+                              title: Text("Negocios",
+                                style: TextStyle(
+                                    color: Colors.black
+                                ),
+                              ),
+                              leading: Image.asset('imagenes/negocios1.jpg'),
+                              onTap: (){
+                                Navigator.of(context).pop();
+                                Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                );
+                              }
+                          )
+                      ),
 
-                        child: Text('Buscar por categoria de negocio',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
+                      Container(
+                          color: Colors.black26,
+                          margin: EdgeInsets.all(3),
+                          child: ListTile(
+                              title: Text("Compras",
+                                style: TextStyle(
+                                    color: Colors.black
+                                ),
+                              ),
+                              leading: Image.asset('imagenes/compras1.jpg'),
+                              onTap: (){
+                                Navigator.of(context).pop();
+                                Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                );
+                              }
+                          )
+                      ),
+
+                      Container(
+                          color: Colors.black26,
+                          margin: EdgeInsets.all(3),
+                          child: ListTile(
+                              title: Text("Categorias",
+                                style: TextStyle(
+                                    color: Colors.black
+                                ),
+                              ),
+                              leading: Image.asset('imagenes/categorias.jpg'),
+                              onTap: (){
+                                  Navigator.of(context).pop();
+                                  Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                  );
+                              }
+                          )
+                      ),
+
+                      Container(
+                          color: Colors.black26,
+                          margin: EdgeInsets.all(3),
+                          child: ListTile(
+                              title: Text("Actividad",
+                              style: TextStyle(
                                 color: Colors.black
-                            )
-                        ),
+                              ),
+                              ),
+                              leading: Image.asset('imagenes/actividad1.jpg'),
+                              onTap: (){
+                                Navigator.of(context).pop();
+                                Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=> Compras()),
+                                );
+                              }
+                          )
+                      ),
+                    ]
+                )
+            ),
+
+            body: SafeArea(
+              child: Column(
+                children:[
+
+                  Container(
+                    padding:EdgeInsets.only(right: 118, left: 118, top: 15),
+                    alignment: Alignment.center,
+                    child: Image.asset('imagenes/mooi.jpg'),
+                  ),
+
+                  Container(
+                      padding:EdgeInsets.only(right: 30, left: 30, top: 40),
+                      alignment: Alignment.topCenter,
+                      child: RaisedButton.icon(
+                          color: Colors.black54,
+                          label: Text("Negocios disponibles",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white
+                              )
+                          ),
+                          icon: Icon(
+                            Icons.add_business_rounded,
+                            size: 20,
+                            color: Colors.lightGreen,
+                          ),
+
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ListarNegocios()
+                                )
+                            );
+                          }
+                      )
+                  ),
+
+                  Container(
+                      padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                      alignment: Alignment.topCenter,
+                      child: RaisedButton.icon(
+                          color: Colors.black54,
+                          label: Text("Buscar productos",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white
+                              )
+                          ),
+                          icon: Icon(
+                            Icons.fastfood_rounded,
+                            size: 20,
+                            color: Colors.lightGreen,
+                          ),
 
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => buscarNegocioCategoria()
+                                  builder: (context) => buscar()
                               )
                           );
                         }
-                    )
-                ),
-
-                Container(
-                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
-                    alignment: Alignment.center,
-                    child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                            primary: Colors.red,
-                            backgroundColor: Colors.white.withAlpha(200)
-                        ),
-
-                        child: Text('Negocios registrados en la App',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black
-                            )
-                        ),
-
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ListarNegocios()
+                      )
+                  ),
+                  Container(
+                      padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                      alignment: Alignment.topCenter,
+                      child: RaisedButton.icon(
+                          color: Colors.black54,
+                          label: Text("Categorias",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white
                               )
-                          );
-                        }
-                    )
-                ),
-                Container(
-                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
-                    alignment: Alignment.center,
-                    child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                            primary: Colors.red,
-                            backgroundColor: Colors.white.withAlpha(200)
-                        ),
+                          ),
+                          icon: Icon(
+                            Icons.clean_hands_rounded,
+                            size: 20,
+                            color: Colors.lightGreen,
+                          ),
 
-                        child: Text('Negocios por actividad',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black
-                            )
-                        ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => buscarNegocioCategoria()
+                                )
+                            );
+                          }
+                      )
+                  ),
 
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => buscarNegocioActividad()
+                  Container(
+                      padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                      alignment: Alignment.topCenter,
+                      child: RaisedButton.icon(
+                          color: Colors.black54,
+                          label: Text("Actividad",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white
                               )
-                          );
-                        }
-                    )
-                ),
-                Container(
-                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
-                    alignment: Alignment.center,
-                    child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.white.withAlpha(200)
-                        ),
+                          ),
+                          icon: Icon(
+                            Icons.delivery_dining_rounded,
+                            size: 20,
+                            color: Colors.lightGreen,
+                          ),
 
-                        child: Text('Compras',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black
-                            )
-                        ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => buscarNegocioActividad()
+                                )
+                            );
+                          }
+                      )
+                  ),
 
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Compras()
+                  Container(
+                      padding:EdgeInsets.only(right: 30, left: 30, top: 10),
+                      alignment: Alignment.topCenter,
+                      child: RaisedButton.icon(
+                          color: Colors.black54,
+                          label: Text("Compras",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white
                               )
-                          );
-                        }
-                    )
-                ),
-                Container(
-                    padding:EdgeInsets.only(right: 30, left: 30, top: 10),
-                    alignment: Alignment.center,
-                    child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.white.withAlpha(200)
-                        ),
+                          ),
+                          icon: Icon(
+                            Icons.add_shopping_cart_outlined,
+                            size: 20,
+                            color: Colors.lightGreen,
+                          ),
 
-                        child: Text('Registro clientes',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black
-                            )
-                        ),
-
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RegistroClientes()
-                              )
-                          );
-                        }
-                    )
-                ),
-
-              ]
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Compras()
+                                )
+                            );
+                          }
+                      )
+                  ),
+                ]
             ),
           )
         )
@@ -202,4 +302,3 @@ class MenuPrincipal extends StatelessWidget {
     );
   }
 }
-
