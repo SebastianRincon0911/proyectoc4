@@ -65,7 +65,7 @@ class _ConsultaClientes extends State<ConsultaClientes> {
                   child: ListTile(
                     title: Text(data["Nombre"]),
                     subtitle: Text(data["Direccion"]),
-                    leading: Image.network(data['Logo']),
+                    leading: Image.network(data['Logo'],width: 100,),
                     onTap: (){
                       Negocio neg = Negocio(data["Foto"],data["Nombre"], data["Direccion"],
                           data["Geolocalizacion"], data["Celular"], data["Telefono"], data["Web"],data["Actividad"],data["Categoria"]);

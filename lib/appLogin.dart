@@ -40,17 +40,18 @@ class _PantallaState extends State<Pantalla> {
         Scaffold(
             backgroundColor: Colors.transparent,
             body: SafeArea(
+
               child: Column(
                 children: [
 
                   Container(
-                    padding:EdgeInsets.only(right: 140, left: 140, top: 25),
+                    padding:EdgeInsets.only(right: 140, left: 140, top: 0),
                     alignment: Alignment.center,
                     child: Image.asset('imagenes/mooi.jpg'),
                   ),
 
                   Container(
-                      height: 38,
+                      height: 60,
                       child: Center(
                           child: Text('Mooi products',
                               style: TextStyle(
@@ -89,7 +90,7 @@ class _PantallaState extends State<Pantalla> {
                   ),
 
                   Container(
-                      padding:EdgeInsets.only(right: 40, left: 40, top: 35),
+                      padding:EdgeInsets.only(right: 40, left: 40, top: 30),
                       alignment: Alignment.center,
                       child: RaisedButton.icon(
                         color: Colors.black87,

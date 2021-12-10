@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:proyectoc4/buscarNegocio.dart';
 import 'package:proyectoc4/buscarNegocioActividad.dart';
+import 'package:proyectoc4/geolocalizacion.dart';
 import 'package:proyectoc4/index.dart';
 import 'package:proyectoc4/listaNegocios.dart';
+import 'package:proyectoc4/mensaje.dart';
 import 'buscarProductos.dart';
 import 'fondosPantalla.dart';
 import 'listaNegocios.dart';
@@ -47,8 +49,13 @@ class MenuPrincipal extends StatelessWidget {
                   Container(
                       padding:EdgeInsets.only(right: 30, left: 30, top: 40),
                       alignment: Alignment.topCenter,
-                      child: RaisedButton.icon(
-                          color: Colors.black54,
+                      child: ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+
+                          primary: Colors.black54,
+
+                        ),
+
                           label: Text("Negocios disponibles",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -72,11 +79,16 @@ class MenuPrincipal extends StatelessWidget {
                       )
                   ),
 
+
                   Container(
                       padding:EdgeInsets.only(right: 30, left: 30, top: 10),
                       alignment: Alignment.topCenter,
-                      child: RaisedButton.icon(
-                          color: Colors.black54,
+                      child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+
+                            primary: Colors.black54,
+
+                          ),
                           label: Text("Buscar productos",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -102,8 +114,12 @@ class MenuPrincipal extends StatelessWidget {
                   Container(
                       padding:EdgeInsets.only(right: 30, left: 30, top: 10),
                       alignment: Alignment.topCenter,
-                      child: RaisedButton.icon(
-                          color: Colors.black54,
+                      child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+
+                            primary: Colors.black54,
+
+                          ),
                           label: Text("Categorias",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -130,8 +146,12 @@ class MenuPrincipal extends StatelessWidget {
                   Container(
                       padding:EdgeInsets.only(right: 30, left: 30, top: 10),
                       alignment: Alignment.topCenter,
-                      child: RaisedButton.icon(
-                          color: Colors.black54,
+                      child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+
+                            primary: Colors.black54,
+
+                          ),
                           label: Text("Actividad",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -158,8 +178,12 @@ class MenuPrincipal extends StatelessWidget {
                   Container(
                       padding:EdgeInsets.only(right: 30, left: 30, top: 10),
                       alignment: Alignment.topCenter,
-                      child: RaisedButton.icon(
-                          color: Colors.black54,
+                      child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+
+                            primary: Colors.black54,
+
+                          ),
                           label: Text("Compras",
                               textAlign: TextAlign.center,
                               style: TextStyle(

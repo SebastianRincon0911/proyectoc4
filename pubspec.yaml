@@ -38,6 +38,8 @@ dependencies:
   cloud_firestore:
   firebase_database:
   fluttertoast: ^8.0.8
+  firebase_messaging:
+  google_maps_flutter:
 
 dev_dependencies:
   flutter_test:

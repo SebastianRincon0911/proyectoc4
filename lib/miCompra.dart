@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:proyectoc4/listaNegocios.dart';
 
 class MiCompra extends StatelessWidget {
   const MiCompra({Key? key}) : super(key: key);
@@ -42,23 +43,33 @@ class _ListaComprasState extends State<ListaCompras> {
             child: ListView.builder(
               itemCount: widget.lista.length,
               itemBuilder: (BuildContext context,i){
-                return Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(3),
-                      padding: EdgeInsets.all(10),
-                      child: ListTile(
-                        title: Text(widget.lista[i][0]+"  "+ widget.lista[i][1],
-                        style: TextStyle(
-                          color: Colors.white,
+                final item = widget.lista[i][0];
+                return Dismissible(
+
+                  onDismissed: (_){
+                    widget.lista.removeAt(i);
+                  },
+                  key: Key(item),
+                  movementDuration: Duration(milliseconds: 100),
+
+                  child: ListTile(
+                    title: Text(widget.lista[i][0]+"  "+ widget.lista[i][1],
+                      style: TextStyle(
+                        color: Colors.white,
 
                         ),
                         ),
                         tileColor: Colors.black54,
+                  ),
+                  background: Container(
+                    color: Colors.blue,
+                    alignment: Alignment.centerLeft,
 
-                      ),
-                    ),
-                  ],
+                    child: Text("Eliminar",style: TextStyle(
+                      fontSize: 20
+                    ),),
+                  ),
+
                 );
               },
 
@@ -67,7 +78,7 @@ class _ListaComprasState extends State<ListaCompras> {
           ),
           Container(
               padding: EdgeInsets.all(2),
-              color: Colors.black26,
+              color: Colors.transparent,
               margin: EdgeInsets.all(5),
               alignment: Alignment.center,
               child: Column(
@@ -82,7 +93,7 @@ class _ListaComprasState extends State<ListaCompras> {
                             color: Colors.black87,
                           ),
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.white70,
+                              primary: Colors.white,
                               onPrimary: Colors.black87,
                               onSurface: Colors.red,
                               elevation: 10,
@@ -107,8 +118,8 @@ class _ListaComprasState extends State<ListaCompras> {
                             }
                             Fluttertoast.showToast(msg: "El total de su compra es "+ total.toString(),
                               fontSize: 20,
-                              backgroundColor: Colors.blue,
-                              textColor: Colors.black,
+                              backgroundColor: Colors.black,
+                              textColor: Colors.white,
                               toastLength: Toast.LENGTH_SHORT,
 
                             );
@@ -120,57 +131,116 @@ class _ListaComprasState extends State<ListaCompras> {
                 ],
               )
           ),
-          Container(
-            padding: EdgeInsets.all(2),
-            color: Colors.black26,
-            margin: EdgeInsets.all(5),
-            alignment: Alignment.center,
-            child: ElevatedButton.icon(
-              label: Text("Registrar su compra",
-                textAlign: TextAlign.center,),
-              icon: Icon(Icons.checklist,
-                size: 20,
-                color: Colors.black87,
-              ),
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.white70,
-                  onPrimary: Colors.black87,
-                  onSurface: Colors.red,
-                  elevation: 10,
-                  shape: BeveledRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(5))
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: EdgeInsets.all(2),
+                color: Colors.transparent,
+                margin: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: ElevatedButton.icon(
+                  label: Text("Domicilio",
+                    textAlign: TextAlign.center,),
+                  icon: Icon(Icons.checklist,
+                    size: 20,
+                    color: Colors.black87,
                   ),
-                  textStyle: TextStyle(
-                      color: Colors.white,
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      onPrimary: Colors.black87,
+                      onSurface: Colors.red,
+                      elevation: 10,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))
+                      ),
+                      textStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal
+                      )
+                  ),
+                  onPressed: (){
+                    List listaregistrar=[];
+                    total=0;
+                    var datonum;
+                    for( int i=0; i<widget.lista.length; i++){
+                      datonum = int.parse(widget.lista[i][1]);
+                      total=datonum+total;
+                    }
+                    for( int i=0; i<widget.lista.length; i++){
+                      listaregistrar.add(widget.lista[i][0]);
+                    }
+
+                    registrarproducto.doc().set({
+                      "Producto":listaregistrar,
+                      "Total": total,
+                      "Tipo de Orden": "Domicilio"
+                    });
+                    Fluttertoast.showToast(msg: "Su compra fue registrada",
                       fontSize: 20,
-                      fontWeight: FontWeight.normal
-                  )
+                      backgroundColor: Colors.black,
+                      textColor: Colors.white,
+                      toastLength: Toast.LENGTH_SHORT,
+                    );
+                  },
+
+                ),
               ),
-              onPressed: (){
-                List listaregistrar=[];
-                total=0;
-                var datonum;
-                for( int i=0; i<widget.lista.length; i++){
-                  datonum = int.parse(widget.lista[i][1]);
-                  total=datonum+total;
-                }
-                for( int i=0; i<widget.lista.length; i++){
-                  listaregistrar.add(widget.lista[i][0]);
-                }
+              Container(
+                padding: EdgeInsets.all(2),
+                color: Colors.transparent,
+                margin: EdgeInsets.all(5),
+                alignment: Alignment.center,
+                child: ElevatedButton.icon(
+                  label: Text("Recoje",
+                    textAlign: TextAlign.center,),
+                  icon: Icon(Icons.checklist,
+                    size: 20,
+                    color: Colors.black87,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      onPrimary: Colors.black87,
+                      onSurface: Colors.red,
+                      elevation: 10,
+                      shape: BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))
+                      ),
+                      textStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal
+                      )
+                  ),
+                  onPressed: (){
+                    List listaregistrar=[];
+                    total=0;
+                    var datonum;
+                    for( int i=0; i<widget.lista.length; i++){
+                      datonum = int.parse(widget.lista[i][1]);
+                      total=datonum+total;
+                    }
+                    for( int i=0; i<widget.lista.length; i++){
+                      listaregistrar.add(widget.lista[i][0]);
+                    }
 
-                registrarproducto.doc().set({
-                  "Producto":listaregistrar,
-                  "Total": total
-                });
-                Fluttertoast.showToast(msg: "Su compra fue registrada",
-                  fontSize: 20,
-                  backgroundColor: Colors.blue,
-                  textColor: Colors.black,
-                  toastLength: Toast.LENGTH_SHORT,
-                );
-              },
+                    registrarproducto.doc().set({
+                      "Producto":listaregistrar,
+                      "Total": total,
+                      "Tipo de Orden": "Recoje en tienda"
+                    });
+                    Fluttertoast.showToast(msg: "Su compra fue registrada",
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      textColor: Colors.white,
+                      toastLength: Toast.LENGTH_SHORT,
+                    );
+                  },
 
-            ),
+                ),
+              ),
+            ],
           )
 
         ],
